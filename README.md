@@ -29,3 +29,13 @@ With help of given subnet 255.255.255.0, We can conclude
   
 Host A and B will be in network N1 AND Host C and D will be in network N2.
 In order to transfer packets from one network to another, we will install Router R1 which connects N1 and N2.
+
+## NAT
+Network Address Translation - It's basically a way to map multiple private IP addresses to one public address before transferring the information.
+Consider an example,
+- I'm browsing something, and my system will send request in the form of packets to the router, which passes it along to the web. 
+- But before sending it out, the router changes the outgoing IP address from a private local address to public address.
+- Then, the server responds back to the public IP addreses and router will translate it to the local private IP. This kind of transalation is called as NAT.
+- This basically adds extra layer of security as public IP address will be visible only to the outside world.
+- Static NAT : When local address is converted to public, router chooses the same one everytime. Public address associated with router is always consistent.
+- Dynamic NAT : When local address is converted to public, router chooses random one from the pool of public addresses. This results in router getting different IP address each time.
